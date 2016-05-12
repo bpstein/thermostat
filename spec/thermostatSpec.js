@@ -57,8 +57,8 @@ describe('Thermostat', function() {
     expect(thermostat.currentTemperature()).toEqual(25);
   });
 
-  it('displays the right color:orange', function(){
-    expect(thermostat.tempColor).toEqual("orange");
+  it('displays the right color:yellow', function(){
+    expect(thermostat.tempColor).toEqual("yellow");
   });
 
   it('displays the right color: green', function(){
