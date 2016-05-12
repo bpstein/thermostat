@@ -19,6 +19,7 @@ Thermostat.prototype.powerSaveOff = function (){
 
 Thermostat.prototype.resetTemp = function (){
   this._temperature = 20;
+  this.changeTempColor();
 };
 
 Thermostat.prototype.powerSaveOn = function (){
