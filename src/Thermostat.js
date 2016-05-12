@@ -54,9 +54,9 @@ function Thermostat() {
 
   Thermostat.prototype.colour = function() {
     if (this._temperature < 18) {
-      return this._colour = 'green';
+      return this._colour = 'blue';
     } else if (this._temperature < 25) {
-      return this._colour = 'yellow';
+      return this._colour = 'green';
     } else {
       return this._colour = 'red';
     }

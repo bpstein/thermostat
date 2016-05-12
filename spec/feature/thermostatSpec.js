@@ -51,12 +51,12 @@ var thermostat;
 
   it('displays temperature in green if temperature < 18', function() {
     thermostat.down(5);
-    expect(thermostat.colour()).toEqual('green');
+    expect(thermostat.colour()).toEqual('blue');
   });
 
   it('displays temperature in yellow if temperature < 25', function() {
     thermostat.up(4);
-    expect(thermostat.colour()).toEqual('yellow');
+    expect(thermostat.colour()).toEqual('green');
   });
 
   it('displays temperature in red if temperature 25 or more ', function() {

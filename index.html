@@ -3,12 +3,11 @@
 <head>
 <style>
 img {
-  -webkit-filter: hue-rotate(90deg); /* Chrome, Safari, Opera */
-  filter:hue-rotate(90deg);
+  /*-webkit-filter: hue-rotate(90deg); /* Chrome, Safari, Opera */
+  /*filter:hue-rotate(90deg);*/*/
 }
 </style>
   <meta charset="UTF-8">
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <title>Thermostat</title>
 </head>
@@ -16,28 +15,29 @@ img {
 <body style="text-align: center;">
 
   <div class="row">
-    <div class="col-md-3">
-      <img id="image" style=" width: 1024px; height: 681px; margin: 0 0 0 -700px;" />
-      <form  style="position:relative; z-index:10; top: -130px; left: 40px;">
+    <div class="col-md-3" style="overflow: hidden; max-height: 500px;">
+      <img id="image" style=" width: 1024px; max-height: 500px; margin: 0 0 0 -700px;" />
+      <form  style="position:relative; z-index:10; top: -130px; left: 15px; width: 80%;
+    margin: auto;">
         <select class="form-control">
           <option value="2643743">London</option>
           <option value="2673730">Stockholm</option>
           <option value="3633006">Maracaibo</option>
         </select>
       </form>
-      <div style="position:relative; z-index:11; top: -670px; left: 30px;">
+      <div style="position:relative; z-index:11; top: -520px; left: 30px;">
         <p id="cityName" style="text-align:center; color:#FFFFFF; font-size:50px"></p>
       </div>
+      <div class="col-md-2", style="position:relative; z-index:11; top: -520px; left: 30px;">
+        <p id="cityTemperature"style="text-align:left; color:#FFFFFF; font-size:50px"></p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <img id="cityPic" style=" width: 1024px; height: 681px; margin: 0 0 0 0px;" src="home-improvement-youblogz.jpg"/>
-      <span id ="currentTemperature"></span>
-      <br>
-        <span id ="powerModeStatus"></span>
+    <div class="col-md-7" style="overflow: hidden; max-height: 500px;">
+      <p id ="currentTemperature" style="text-align:center; color:#FFFFFF; font-size:50px; position: absolute; left: 10%"></p>
+      <img id="cityPic" style="width: 100%;" />
+      <p id ="powerModeStatus"></p>
     </div>
-    <div class="col-md-3">
-      <span id="cityTemperature"></span>
-    </div>
+
   </div>
 
   <div class="row">
