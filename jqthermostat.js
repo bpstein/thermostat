@@ -6,18 +6,21 @@ $(document).ready(function() {
     thermostat.up(1)
     updateTemperatureDisplay()
     updateDisplayColour ()
+    sentToServer()
   });
 
   $('#decrease').click(function(event) {
     thermostat.down(1)
     updateTemperatureDisplay()
     updateDisplayColour ()
+    sentToServer()
   });
 
   $('#reset').click(function(event) {
     thermostat.reset()
     updateTemperatureDisplay()
     updateDisplayColour ()
+    sentToServer()
   });
 
   $('#powerMode').click(function(event) {
@@ -53,11 +56,42 @@ $(document).ready(function() {
     });
   }
 
+  function combineFunctions() {
+    updateTemperatureDisplay()
+    updatePowerModeDisplay()
+    updateDisplayColour()
+  }
+
+  function sentToServer() {
+    var url = 'http://localhost:4567/temperature?temp=';
+    var input = thermostat.temperature();
+     $.post(url + input);
+  }
+
+  function getFromServer() {
+    var url = 'http://localhost:4567/temperature';
+    $.ajax({
+      type: "GET",
+      url: url,
+      dataType: "html",
+      success: function(data){
+        thermostat = new Thermostat(data);
+        combineFunctions()
+        getWeather("2643743")
+      },
+      error: function(){
+        thermostat = new Thermostat();
+        combineFunctions()
+        getWeather("2643743")
+      }
+    });
+  }
+
   function updateTemperatureDisplay() {
     $('#currentTemperature').text(thermostat.temperature());
   }
 
-  function updateDisplayColour () {
+  function updateDisplayColour() {
     if(thermostat.colour() === 'blue') {
       $("#cityPic").attr('src', "bluehome-improvement-youblogz.jpg")
     } else if (thermostat.colour() === "green") {
@@ -68,7 +102,7 @@ $(document).ready(function() {
     }
   };
 
-  function updatePowerModeDisplay () {
+  function updatePowerModeDisplay() {
     $('#powerModeStatus').text(thermostat.powerMode());
   }
 });
