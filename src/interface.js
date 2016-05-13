@@ -44,7 +44,7 @@ $(document).ready(function() {
 
   updateTemperatureDisplay()
   updateDisplayColour ()
-  $("#cityPic").attr('src', "home-improvement-youblogz.jpg")
+  $("#cityPic").attr('src', "img/home-improvement-youblogz.jpg")
   updatePowerModeDisplay ()
   getWeather("2643743")
   $("#image").attr('src', "http://www.europeanconnection.com/media/1573/london_bridge_falling_down_by_startle3iv-d4r5w1o.jpg")
@@ -93,12 +93,12 @@ $(document).ready(function() {
 
   function updateDisplayColour() {
     if(thermostat.colour() === 'blue') {
-      $("#cityPic").attr('src', "bluehome-improvement-youblogz.jpg")
+      $("#cityPic").attr('src', "img/bluehome-improvement-youblogz.jpg")
     } else if (thermostat.colour() === "green") {
-      $("#cityPic").attr('src', "home-improvement-youblogz.jpg")
+      $("#cityPic").attr('src', "img/home-improvement-youblogz.jpg")
     }  else {
       (thermostat.colour() === "red")
-      $("#cityPic").attr('src', "redhome-improvement-youblogz.jpg")
+      $("#cityPic").attr('src', "img/redhome-improvement-youblogz.jpg")
     }
   };
 

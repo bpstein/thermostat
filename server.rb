@@ -2,7 +2,6 @@ require 'sinatra/base'
 
 class Thermostat < Sinatra::Base
   enable :sessions
-
   set :public_folder, proc{ File.join(root)}
 
   get '/' do

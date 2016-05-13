@@ -1,58 +1,9 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Thermostat</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <section>
-      <script src="https://code.jquery.com/jquery-2.2.3.min.js"
-        integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
-        crossorigin="anonymous"></script>
-      <h1 id="temperature"></h1>
-
-      <section id="dropdown">
-        <h2>Temp outside: <span id="current-temperature"></h2>
-        <select id="current-city">
-          <option value="london">London</option>
-          <option value="newyork">New York</option>
-          <option value="paris">Paris</option>
-          <option value="tokyo">Tokyo</option>
-          <option value="sydney">Sydney</option>
-        </select>
-      </section>
-      <br>
-
-      <section id="choose">
-        <form id="select-city">
-          <input id="custom-city" type="text" placeholder="Enter a city"></input>
-          <input type="submit"></input>
-        </form>
-      </section>
-
-      <p id="controls">
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        <br><br>
-        power saving mode is <span id="power-saving-status">on</span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
-      </p>
-    </section>
-    <script src="thermostat.js"></script>
-    <script src="interface.js"></script>
-  </body>
-======= -->
 <head>
-<style>
-img {
-  /*-webkit-filter: hue-rotate(90deg); /* Chrome, Safari, Opera */
-  /*filter:hue-rotate(90deg);*/*/
-}
-</style>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
   <title>Thermostat</title>
 </head>
 
@@ -89,10 +40,10 @@ img {
       </div>
       <div class="col-md-8">
         <div class="col-md-3">
-            <button id="increase">Increase</button>
+            <button id="increase">+</button>
         </div>
         <div class="col-md-3">
-            <button id="decrease">Decrease</button>
+            <button id="decrease">-</button>
         </div>
         <div class="col-md-3">
             <button id="reset">Reset</button>
@@ -105,13 +56,9 @@ img {
     </div>
   </div>
 
-
-
-  <script src="src/Thermostat.js"></script>
-  <script src="jquery.js"></script>
-  <script src="jqthermostat.js"></script>
+  <script src="src/thermostat.js"></script>
+  <script src="src/jquery.js"></script>
+  <script src="src/interface.js"></script>
 
 </body>
-
->>>>>>> de27f64ca6d0c5c81f6e9d0f74f5582b51324dd5
 </html>
