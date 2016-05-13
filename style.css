@@ -1,0 +1,16 @@
+body {
+  margin-top: 50px;
+  left: auto;
+  right: ;
+}
+
+h2,
+#temperature, 
+#choose,
+#dropdown {
+  text-align: center;
+}
+
+#controls {
+  text-align: center;
+}
